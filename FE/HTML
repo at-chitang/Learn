@@ -1,0 +1,60 @@
+HTML 
+	mark up language
+	web pages
+		texts
+		image, clips
+		dropdown
+		moving boxes
+	web application
+history HTML
+HTML document
+	ex hello world
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<title>Document</title>
+	</head>
+	<body>
+		<p>Hello world,  I am thuong thuong</p>
+	</body>
+	</html>
+element
+	<p class="nice"> Hello world!</p>
+
+	opening tag
+	an attribute and its value
+	enclosed text content
+	closing tag
+
+
+	Block-level elements: <p>,<div>: occupies, the entire space of its parent element
+	Inline emlements:<span>
+	Empty elements: no content and closing tag ex: <br>
+
+Attribute:
+	Provides additional information about HTML  elements
+Doctype:
+	Not tag
+Origanizing:
+Layout:
+	<header>: page header
+	<footer>: element defines a page foooter
+Content categories:
+	Heading
+	Sectioning
+	Metadata
+	Interactive
+	Embedded
+	Phrasing
+Section and outline
+	//the aside 
+	<body> is the main section
+	Section can be nested
+	Each section has its own heading hierarchy
+
+Cac the can chu y de xay dung trang html:
+	header, main, footer
+	h1 -> h6, div, p, img, aside, iframe,video,span,
+	nav-> ul--> li--> a 
+
+

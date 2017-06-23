@@ -1,0 +1,23 @@
+B1: qua nhanh master
+B2: pull master ve
+B3: qua nhanh featureB
+B4: - git merge master
+	- git rebase master
+
+git fetch:			Lay cac nhanh tren server ve may cua minh
+				git fetch sumint branch:branch
+
+git stash			Dua cac file dang lam ma chua dua vao commit vao stack
+git stash apply
+
+git cherry-pick		Lua chon commit de add vao nhanh khac
+
+git tag				Dat ten version cho nhanh de sau nay quay ve cho de
+
+
+
+
+
+
+
+ssh -T git@github.com 

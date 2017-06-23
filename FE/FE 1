@@ -1,0 +1,20 @@
+Layout
+	<header>
+	<main>
+	<footer>
+
+Content Categories
+	Flow
+	Heading
+	Sectioning
+	Interactive
+	Embedded
+	Phrasing
+	Metadatan
+
+Section and outline
+	<body> is the main section
+	Section can be nested
+	Each section has its own heading hierachy
+
+Tab:	h1->h6, div, p, img, a, nav, ul, li, aside, iframe, video, spain, i, strong

@@ -1,0 +1,29 @@
+repo:
+	-	server:	- git hub
+				- bit bucket
+				- git lab
+	-	local:	- git add		:	Chuan bi file nao se duoc day len
+				- git commit	:	Dat ten cho nhom file se day len
+	
+	<-	git clone:	all file from server to cocal(just use the first time when you down it from sever)
+	<-	git pull:	some file(just update file which new in branch)
+
+	->	git push:	upp file from local to server
+
+
+pull request:	dua code vao nhanh dung chung
+
+
+
+branch:
+
+
+
+
+merge
+rebase
+stoish
+origin
+
+	-add:	Khi muon add nhieu file thi su dung lenh gi
+	

@@ -1,0 +1,19 @@
+git init:		xac dinh thu muc hien tai la thu muc chua du an
+	add:		them 1 file vao de chuan bi commit
+	commit:		dua cac file da add vao vi tri san sang va vao trong log
+	push:		day cac file da commit len git
+
+	branch:		xac dinh nhanh
+	status:		xem cac file da add
+	log:		xem cac file da commit
+
+	remote add [ten_bien] [duong_dan]		gan cho 1 bien 1 duong dan
+
+	checkout	doi nhanh
+	checkout -b tao nhanh moi
+
+	pull:		cap nhat nhung file moi trong 1 nhanh ve
+	
+vd:
+git init
+git add
