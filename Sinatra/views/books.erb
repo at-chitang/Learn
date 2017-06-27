@@ -1,0 +1,11 @@
+<table style="width:25%">
+  <tr>
+    <th>id</th>
+    <th>Name</th> 
+  </tr>
+<% @books.each do |b| %>
+	<tr>
+		<td><%= b["id"] %></td>
+		<td><%= b["name"] %></td>
+	</tr>
+<% end %>

@@ -1,0 +1,7 @@
+rest:
+		post		creat
+		get			read
+		put			update
+		delete	delete
+
+		
