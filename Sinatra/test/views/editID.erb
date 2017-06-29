@@ -1,0 +1,23 @@
+<h3>Bạn vừa sửa ID của sách : <% @nameBook.first['name']%></h3>
+<form action="/books" method="post">
+<table style="width:25%">
+  <tr>
+    <th>ID cũ</th>
+    <td>
+			<input type="id" name="id" value="<%= @idBook%>" readonly>	
+    </td>
+  </tr>
+	<tr>
+    <th>ID mới</th> 
+		<td>
+			<input type="id" name="id" value="<%= @idBook%>" required>	
+		</td>
+		<div style="margin-top: 20px; float: lèt">
+			<input type="hidden" name="_method" value="put">
+			<input type="hidden" name="oldID" value="<%= @idBook%>">
+			<button>Lưu lại</button>
+		</div>
+</form>
+<form action="/books" method="GET" style="margin-top: 20px;">
+	<input type="submit" value="Quay lại">
+</form>

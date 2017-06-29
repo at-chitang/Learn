@@ -1,0 +1,51 @@
+<header class="header">
+	<form  action="/user/new" method="GET">
+		<div class="button">
+			<input type="submit" value="Tạo khách hàng">
+		</div>
+	</form>
+	<form  action="/books" method="GET">
+		<div class="button">
+			<input type="submit" value="Xem sách">
+		</div>
+	</form>
+</header>
+<table>
+  <tr>
+    <th>Tên khách hàng</th>
+    <th>Giới tính</th>
+    <th>Sinh nhật</th> 
+  </tr>
+	<% @users.each do |user| %>
+		<tr>
+			<td><%= user["name"] %></td>
+			<td>
+				<%= 
+					case user["gender"]
+						when 0
+							"Nam"
+						when 1
+							"Nữ"
+						else
+							"Ngại quá à"
+					end
+				%>
+			</td>
+			<td><%= user["birthday"].day %>/<%= user["birthday"].month %>/<%= user["birthday"].year %></td>
+		</tr>
+	<% end %>
+</table>
+
+<style type="text/css">
+	.header{
+		position: fixed;
+		right: 0px;
+	}
+	table{
+/*		width: 25%;
+*/	}
+	td, th{
+		padding-right: 20px;
+	}
+
+</style>

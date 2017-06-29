@@ -1,0 +1,42 @@
+<head>
+	<meta charset="utf-8">
+</head>
+<form action="/user/new" method="post">
+	<div class="input input-name">
+		<h3>Tên </h3>
+		<input type="text" name="name" placeholder="Ho & Ten" required="true">
+	</div>
+	<div class="input input-gender">
+		<h3>Giới tính</h3>
+		<input type="radio" name="gender" value="0" checked>Male
+		<input type="radio" name="gender" value="1">Female
+		<input type="radio" name="gender" value="2">Orther
+	</div>
+	<div class="input input-birth">
+		<h3>Ngày sinh</h3>
+		<input type="date" name="birth" placeholder="Thời gian">
+	</div>
+	<div style="margin-top: 20px; float: left;">
+		<input id="submit" type="submit" name="submit_info" value="Lưu lại">
+	</div>
+</form>
+<form  action="/users" method="GET" style="margin-top: 20px;">
+	<input type="submit" value="Quay lại">
+</form>
+
+
+<style type="text/css">
+	.input{
+		margin-top: 20px;
+	}
+	.input h3{
+		width: 100px;
+		float: left;
+		clear: both;
+	}
+
+	*{
+		margin: 0px;
+	}
+
+</style>

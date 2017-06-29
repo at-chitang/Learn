@@ -1,0 +1,56 @@
+<header class="header">
+	<form  action="/book/new" method="GET">
+		<div class="button">
+			<input type="submit" value="Tạo sách">
+		</div>
+	</form>
+	<form  action="/users" method="GET">
+		<div class="button">
+			<input type="submit" value="Xem khách hàng">
+		</div>
+	</form>
+</header>
+<table>
+  <tr>
+    <th>Tên sách</th>
+    <th>Tác giả</th>
+    <th>Nhà xuất bản</th> 
+    <th>Giá bán</th>
+    <th>Ảnh bìa</th>
+  </tr>
+	<% @books.each do |book| %>
+		<tr>
+			<td><%= book["name"] %></td>
+			<td><%= book["authod"] %></td>
+			<td><%= book["publisher"] %></td>
+			<td><%= book["sale"] %></td>
+			<td class="img">
+				<img src="/books/<%= book["image"]%>" >
+			</td>
+		</tr>
+	<% end %>
+</table>
+
+<style type="text/css">
+	.header{
+		position: fixed;
+		right: 0px;
+	}
+	.header form{
+/*		float: left;
+*/	}
+
+	table{
+		width: 100%;
+	}
+	td, th{
+		padding-right: 20px;
+	}
+	td{
+		text-align: center;
+	}
+	img{
+		max-height: 200px;
+		max-width: 200px;
+	}
+</style>

@@ -1,0 +1,25 @@
+<form action="/books/new" method="GET">
+	<input type="submit" value="Thêm sách">
+</form>
+
+<table style="width:25%">
+  <tr>
+    <th>id</th>
+    <th>Name</th> 
+    <th>Action</th> 
+  </tr>
+<% @books.each do |b| %>
+	<tr>
+		<td><%= b["id"] %></td>
+		<td><%= b["name"] %></td>
+		<td>
+			<form action="/books/edit/<%= b['id'] %>" method="POST" style="display: inline;">
+				<button type="submit">Edit</button>
+			</form>
+			<form action="/books/<%= b['id'] %>" method="POST" style="display: inline;">
+				<input type="hidden" name='_method' value='DELETE' >
+				<button type="submit">Delete</button>
+			</form>
+		</td>
+	</tr>
+<% end %>
