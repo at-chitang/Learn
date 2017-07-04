@@ -1,1 +1,14 @@
 node-sass -w --include-path scss css/sass/style.scss css/style.css
+
+developer.mozilla.org
+
+rem
+
+
+*{
+	background-size: cover;
+		display: inline-block;
+		text-align: top;
+	display: flex;
+		transform: translateY(-50%);
+}

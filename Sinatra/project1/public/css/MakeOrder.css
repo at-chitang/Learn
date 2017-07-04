@@ -1,0 +1,30 @@
+main .left{
+	float: left;
+	width: 25%;
+}
+main .left img{
+	width: 100%;
+	height: auto;
+}
+
+main .right{
+	float: right;
+	width: 75%;
+}
+main .right .input{
+	margin-left: 20px;
+}
+
+main .input{
+	margin-top: 20px;
+}
+main .input h3{
+	width: 150px;
+	float: left;
+	clear: both;
+}
+
+main .button{
+	margin-top: 20px;
+	float: left;
+}

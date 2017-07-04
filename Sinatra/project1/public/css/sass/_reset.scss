@@ -1,0 +1,14 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+.container{
+	width: 1150px;
+	margin: auto;
+}
+.container::after{
+	content: '';
+	display: block;
+	clear: both;
+}

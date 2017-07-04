@@ -1,0 +1,38 @@
+<%= erb :head %>
+<main>
+	<section class="show-item container">
+		<div class="img left">
+			<img src="/books/<%= @book["image"]%>" >
+		</div>
+		<div class="right">
+			<div class="info">
+				<h1 class="name"><%= @book["name"] %></h1>
+				<div class="authod">
+					<span>Tên tác giả:</span>
+					<%= @book["authod"] %>
+				</div>
+				<div class="publisher">
+					<span>Nhà xuất bản:</span>
+					<%= @book["publisher"] %>
+				</div>
+				<div class="sale">
+					<span>Giá bán:</span>
+					<%= @book["sale"] %>
+				</div>
+			</div>
+			<div class="order">
+				<form action="/order/<%= @id%>/<%= @book['id']%>" method="post">
+					<div>
+						<span>Số lượng:</span>
+						<input type="hidden" name="price" value="<%= @book['sale']%>">
+						<input id="amount" type="number" name="amount" value="1">
+						<input type="submit" value="Đặt hàng">
+					</div>
+				</form>
+			</div>
+		</div>
+
+	</section>
+</main>
+
+<%= erb :footer %>

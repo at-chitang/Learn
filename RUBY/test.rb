@@ -1,7 +1,12 @@
-case 1
-	when 1
-		puts "ok"
-	else
-		puts "oh no!"
+class a
+
+	@@link = Hash.new
+
+	@@link[ "Homepage" ] = [ "/books", "/orders" ]
+
+	a,b,c = @@link[ "Homepage" ]
+	puts a
+	puts b
+	p c
+
 end
-		

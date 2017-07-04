@@ -1,0 +1,13 @@
+section .input{
+	margin-top: 20px;
+}
+section .input h3{
+	width: 150px;
+	float: left;
+	clear: both;
+}
+
+section .button{
+	margin-top: 20px;
+	float: left;
+}

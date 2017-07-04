@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title><%= @page_name%></title>
+	<link href="<%= url("css/index.css") %>" rel="stylesheet">
+	<link href="<%= url("css/#{@page_name}.css") %>" rel="stylesheet">
+</head>
+<body>
+	<%=
+		@left_button= "Quay lại"
+		@left_link= "/users"
+		@right_button= "Xem sách"
+		@right_link= "/books"
+		erb :header
+	%>
+
+	<section>
+		<div class="container">
+			
+		</div>
+	</section>
+</body>
+</html>

@@ -1,0 +1,10 @@
+
+main .input{
+	margin-top: 20px;
+}
+
+main .input h3{
+	width: 100px;
+	float: left;
+	clear: both;
+}

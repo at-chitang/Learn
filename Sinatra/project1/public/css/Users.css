@@ -1,0 +1,12 @@
+	td, th{
+		padding-right: 20px;
+	}
+
+	.button-action{
+		margin: 0px;
+		text-align: center;
+	}
+
+	.money, .date{
+		text-align: right;
+	}

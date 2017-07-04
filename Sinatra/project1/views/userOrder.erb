@@ -1,0 +1,28 @@
+<%= erb :head %>
+
+<main>
+	<div class="container">
+		<table>
+		  <tr>
+		    <th>ID</th>
+		    <th>Người mua</th>
+		    <th>Tên sách</th> 
+		    <th>Số lượng</th>
+		    <th>Giá sách</th>
+		    <th>Thành tiền</th>
+		  </tr>
+			<% @orders.each do |order| %>
+				<tr>
+					<td><%= order["id"] %></td>
+					<td><%= order["user"] %></td>
+					<td><%= order["book"] %></td>
+					<td><%= order["quantity"] %></td>
+					<td><%= order["price"] %></td>
+					<td><%= order["quantity"].to_i*order["price"].to_i %></td>
+				</tr>
+			<% end %>
+		</table>
+	</div>
+</main>
+
+<%= erb :footer %>

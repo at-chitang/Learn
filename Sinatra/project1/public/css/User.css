@@ -1,0 +1,46 @@
+
+main .input{
+	margin-top: 20px;
+}
+
+main .input h3{
+	width: 165px;
+	float: left;
+	clear: both;
+}
+main .button{
+ 	margin-top: 20px; 
+ 	float: left;
+}
+
+main table{
+	width: 100%;
+}
+main td, th{
+	padding-right: 20px;
+}
+main td{
+	text-align: center;
+}
+
+
+main .left{
+	width: 25%;
+	float: left;
+}
+main .img img{
+	max-height: auto;
+	max-width: 100%;
+}
+
+main .right{
+	width: 70%;
+	float: right;
+}
+main .info div{
+	height: 40px;
+}
+main #amount{
+	width: 30px;
+}
+

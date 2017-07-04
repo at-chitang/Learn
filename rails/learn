@@ -1,0 +1,13 @@
+client -> nginx -> webserver -> server
+
+load balance
+
+-	Router.rb
+		post/:id
+		posts
+-	Database:
+	+	mysql
+	+	postgres
+	+	sqlite
+	+	migrate
+	+ manage mignate

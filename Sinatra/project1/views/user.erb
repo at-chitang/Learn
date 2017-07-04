@@ -1,0 +1,39 @@
+<%= erb :head %>
+
+<main>
+	<div class="container">
+		
+		<form action="/user/edit" method="post">
+			<div class="input input-name">
+				<h3>Tên </h3>
+				<input type="text" name="name" required value="<%= @user['name'] %>">
+			</div>
+			<div class="input input-gender">
+				<h3>Giới tính</h3>
+				<input type="radio" name="gender" value="0" <%="checked" if @user['gender']==0 %> >Male
+				<input type="radio" name="gender" value="1" <%="checked" if @user['gender']==1 %> >Female
+				<input type="radio" name="gender" value="2" <%="checked" if @user['gender']==2 %> >Orther
+			</div>
+			<div class="input input-birth">
+				<h3>Ngày sinh</h3>
+				<input type="date" name="birth" value="<%= @user['birthday'] %>">
+			</div>
+			<div class="input input-name">
+				<h3>Chi phí thanh toán</h3>
+				<input type="text" readonly value="<%= @user['invoice'] %>">
+			</div>
+			<div class="button">
+				<input type="hidden" name="_method" value="put">
+				<input id="submit" type="submit" name="submit_info" value="Lưu lại">
+			</div>
+		</form>
+		<form action="/user/logout" method="post" class="button">
+			<div >
+				<input type="submit" name="logout" value="Đăng xuất">
+			</div>
+		</form>
+	</div>
+</main>
+
+
+<%= erb :footer %>

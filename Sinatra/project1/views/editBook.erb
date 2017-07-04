@@ -1,0 +1,45 @@
+<%= erb :head %>
+
+<main>
+	<div class="container">
+		<form action="/book/edit" method="post" enctype="multipart/form-data">
+			<div class="left">
+				<img src="<%= url("books/#{@book["image"]}") %>">
+				<div class="input input-name">
+					<h3>Thay đổi</h3>
+					<input type="file" name="file">
+				</div>
+			</div>
+
+			<div class="right">
+				<div class="input input-name">
+					<h3>Tên sách</h3>
+					<input type="text" name="name" required value="<%= @book["name"] %>">
+				</div>
+				<div class="input input-name">
+					<h3>Tác giả</h3>
+					<input type="text" name="authod" required value="<%= @book["authod"] %>">
+				</div>
+				<div class="input input-name">
+					<h3>Nhà xuất bản</h3>
+					<input type="text" name="publisher" value="<%= @book["publisher"] %>">
+				</div>
+				<div class="input input-name">
+					<h3>Giá bán</h3>
+					<input type="number" name="sale" required value="<%= @book["sale"] %>">
+				</div>
+				<div class="input input-name">
+					<h3>Số lượng đã bán</h3>
+					<input type="number" readonly value="<%= @book["quantity"] %>">
+				</div>
+				<div class="button">
+					<input type="hidden" name="id" value="<%= @book["id"] %>">
+					<input type="hidden" name="_method" value="put">
+					<input type="submit" name="submit_info" value="Lưu lại">
+				</div>
+			</div>
+		</div>
+	</form>
+</main>
+
+<%= erb :footer %>

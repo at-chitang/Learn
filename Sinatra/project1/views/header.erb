@@ -1,0 +1,20 @@
+<header class="header">
+	<div class="container">	
+		<div class="logo">
+			<a href="/">
+				<img src="/index/logo.png">
+				<span>Sihc</span>
+			</a>
+		</div>
+		<div class="header-right">
+			<a href="<%= @user_link %>"><%= @user_name %></a>
+			<form class="button left" action="<%= @left_link %>" method="GET">
+				<input type="submit" value="<%= @left_button %>">
+			</form>
+			<form class="button right" action="<%= @right_link %>" method="GET">
+				<input type="submit" value="<%= @right_button %>">
+			</form>
+		</div>
+	</div>
+</header>
+<div style="height: 57px;"></div>

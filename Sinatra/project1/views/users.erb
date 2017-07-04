@@ -1,51 +1,47 @@
-<header class="header">
-	<form  action="/user/new" method="GET">
-		<div class="button">
-			<input type="submit" value="Tạo khách hàng">
-		</div>
-	</form>
-	<form  action="/books" method="GET">
-		<div class="button">
-			<input type="submit" value="Xem sách">
-		</div>
-	</form>
-</header>
-<table>
-  <tr>
-    <th>Tên khách hàng</th>
-    <th>Giới tính</th>
-    <th>Sinh nhật</th> 
-  </tr>
-	<% @users.each do |user| %>
-		<tr>
-			<td><%= user["name"] %></td>
-			<td>
-				<%= 
-					case user["gender"]
-						when 0
-							"Nam"
-						when 1
-							"Nữ"
-						else
-							"Ngại quá à"
-					end
-				%>
-			</td>
-			<td><%= user["birthday"].day %>/<%= user["birthday"].month %>/<%= user["birthday"].year %></td>
-		</tr>
-	<% end %>
-</table>
+<%= erb :head %>
 
-<style type="text/css">
-	.header{
-		position: fixed;
-		right: 0px;
-	}
-	table{
-/*		width: 25%;
-*/	}
-	td, th{
-		padding-right: 20px;
-	}
+<main>
+	<div class="container">
+		<table>
+		  <tr>
+		    <th>Tên khách hàng</th>
+		    <th>Giới tính</th>
+		    <th>Sinh nhật</th>
+		    <th>Chi phí thanh toán</th>
+		    <th>Hành động</th>
+		  </tr>
+			<% @users.each do |user| %>
+				<tr>
+					<td><%= user["name"] %></td>
+					<td>
+						<%= 
+							case user["gender"]
+								when 0
+									"Nam"
+								when 1
+									"Nữ"
+								else
+									"Ngại quá à"
+							end
+						%>
+					</td>
+					<td class="date">
+						<%= user["birthday"].day %>/<%= user["birthday"].month %>/<%= user["birthday"].year %>
+					</td>
+					<td class="money"><%= user["invoice"] %> VND</td>
+					<td class="button-action">
+						<form action="/user/<%= user['id'] %>" method="post">
+							<input type="hidden" name="user_id" value="<%= user['id'] %>">
+							<input type="hidden" name="name" value="<%= user['name'] %>">
+							<input type="submit" value="Đăng nhập">
+						</form>
+					</td>
+				</tr>
+			<% end %>
+		</table>
+		
+	</div>
+</main>
 
-</style>
+
+<%= erb :footer %>

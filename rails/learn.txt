@@ -1,0 +1,34 @@
+client -> nginx -> webserver -> server
+
+load balance
+
+-	Router.rb
+		post/:id
+		posts
+-	Database:
+	+	mysql
+	+	postgres
+	+	sqlite
+	+	migrate
+	+ manage mignate
+-	Controller:
+	+	CRMD
+	+	login
+	+	logout
+	+	phân trang
+-	Model
+	+	CRUD
+	+ ralidate
+	+	relations
+	+	scope
+-	View
+	+	form
+	+	render
+	+	partial
+	+	collection
+-	Action Mailer
+	+	Register
+	+	Mail
+-	Schedule
+	+	lập lịch
+-	API

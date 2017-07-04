@@ -1,54 +1,33 @@
-<head>
-	<meta charset="utf-8">
-</head>
-<form action="/book/new" method="post" enctype="multipart/form-data">
-	<div class="input input-name">
-		<h3>Tên sách</h3>
-		<input type="text" name="name" required="true">
-	</div>
-	<div class="input input-name">
-		<h3>Tác giả</h3>
-		<input type="text" name="authod">
-	</div>
-	<div class="input input-name">
-		<h3>Ảnh bìa</h3>
-		<input type="file" name="file">
-	</div>
-	<div class="input input-name">
-		<h3>Nhà xuất bản</h3>
-		<input type="text" name="publisher">
-	</div>
-	<div class="input input-name">
-		<h3>Giá bán</h3>
-		<input type="number" name="sale">
-	</div>
-	<div class="button">
-		<input type="submit" name="submit_info" value="Lưu lại">
-	</div>
-</form>
-<form  action="/books" method="GET">
-	<div class="button">
-		<input type="submit" value="Quay lại">
-	</div>
-</form>
+<%= erb :head %>
 
+<section>
+	<div class="container">
+		<form action="/book/new" method="post" enctype="multipart/form-data">
+			<div class="input input-name">
+				<h3>Tên sách</h3>
+				<input type="text" name="name" required="true">
+			</div>
+			<div class="input input-name">
+				<h3>Tác giả</h3>
+				<input type="text" name="authod">
+			</div>
+			<div class="input input-name">
+				<h3>Ảnh bìa</h3>
+				<input type="file" name="file">
+			</div>
+			<div class="input input-name">
+				<h3>Nhà xuất bản</h3>
+				<input type="text" name="publisher">
+			</div>
+			<div class="input input-name">
+				<h3>Giá bán</h3>
+				<input type="number" name="sale">
+			</div>
+			<div class="button">
+				<input type="submit" name="submit_info" value="Lưu lại">
+			</div>
+		</form>
+	</div>
+</section>
 
-<style type="text/css">
-	*{
-		margin: 0px;
-	}
-
-	.input{
-		margin-top: 20px;
-	}
-	.input h3{
-		width: 150px;
-		float: left;
-		clear: both;
-	}
-
-	.button{
-		margin-top: 20px;
-		float: left;
-	}
-</style>
+<%= erb :footer %>
