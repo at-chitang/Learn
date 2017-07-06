@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1498702484 source:/home/sihc/C project/codeforce/main.cpp
+	<iostream>
+	<queue>
+	<string>
+	<vector>
+	<cmath>
+	<algorithm>
+	<queue>
+	<stack>
+	<fstream>
+	<string.h>
+	<map>
+
