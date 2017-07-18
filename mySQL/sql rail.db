@@ -1,0 +1,16 @@
+User.find_by()	tra ve 1
+User.where()		tra ve mang
+
+User.new(name: "kien")		|
+User.save									|	== |	User.create(name: "kien")	
+
+User.valid?			kiem tra xem du lieu da thoa dieu kien chua
+
+User.all.order(id: :DESC, :email)
+
+----------------------- 
+
+sefl.table_name = "users"
+
+enum role: ['user', 'mod', 'admin']
+rails db:seed

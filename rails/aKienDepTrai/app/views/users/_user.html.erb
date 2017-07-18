@@ -1,0 +1,18 @@
+<tr>
+	<td><%= user.id %></td>
+	<td><%= link_to("#{user[:user_name]}", "users/#{user[:id]}" ) %></td>
+	<td><%= user[:email] %></td>
+	<td><%= user[:password] %></td>
+	<td><%= user[:name] %></td>
+	<td><%= user[:gender] %></td>
+	<td><%= user[:birthday] %></td>
+	<td><%= user[:role] %></td>
+	<td>
+		<% if( user[:avatar] != nil ) %>
+			<img id="Avata" src= <%= "#{image_url( 'users/'+user[:avatar] )}" %> >
+		<% end %>
+	</td>
+	<td><%= user[:provider] %></td>
+	<td><%= user[:uid] %></td>
+	<td>******</td>
+</tr>

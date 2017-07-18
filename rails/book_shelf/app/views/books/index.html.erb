@@ -1,0 +1,20 @@
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Tên</th>
+    <th>Tác giả</th>
+    <th>Nhà xuất bản</th>
+    <th>Giá bán</th>
+  </tr>
+	<% @books.each do |book| %>
+	  <tr>
+	  	<td><%= book[:id] %></td>
+	  	<td><%= link_to("#{book[:name]}", "books/#{book[:id]}" ) %></td>
+	  	<td><%= book[:author] %></td>
+	  	<td><%= book[:publishor] %></td>
+	  	<td><%= book[:price] %></td>
+	  </tr>
+	<% end %>
+</table>
+
+<%= button_to "Tạo sách", new_book_path, method: :get %>

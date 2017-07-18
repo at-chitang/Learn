@@ -1,0 +1,12 @@
+<tr>
+	<td><%= user.id %></td>
+	<td><%= link_to("#{user[:name]}", "users/#{user[:id]}" ) %></td>
+	<td><%= user[:email] %></td>
+	<td>
+		<%= 
+			@gender = ["Nam", "Nữ", "Ngại quá à"]
+			@gender[ user[:gender] ]
+		%>
+	</td>
+	<td>******</td>
+</tr>

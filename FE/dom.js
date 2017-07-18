@@ -19,9 +19,6 @@ element.style.property = new style
 document.createElement(element)
 document.appendChild(element)
 
-var x = document.getElementsByTagName('table')
-x.style.fontSize = '20px';
-
 
 -	Event
 	+	onclick:

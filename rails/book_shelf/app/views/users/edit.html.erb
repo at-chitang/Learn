@@ -1,0 +1,13 @@
+<%= form_for @user, url: user_path, method: :put do |u| %>
+  Tên				: <%= u.text_field :name, :required => true %><br />
+  Email			: <%= u.email_field :email, :required => true %><br />
+  Giới tính	: 
+  	<%= radio_button( :user, "gender", 0, {checked: (@user.gender == 0)? true : false}) %>Nam
+  	<%= radio_button( :user, "gender", 1, {checked: (@user.gender == 1)? true : false}) %>Nữ
+  	<%= radio_button( :user, "gender", 2, {checked: (@user.gender == 2)? true : false}) %>Khác
+  <br />
+  Ngày sinh	: <%= u.date_field :birthday %><br />
+  Mật khẩu	:	<%= u.text_field :pass, :required => true %><br />
+  <%= u.submit %>
+<% end %>
+<%= button_to "Quay lại", user_path, method: :get %>

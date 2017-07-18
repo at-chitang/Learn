@@ -1,1 +1,4 @@
-puts true+1
+def checkPalindrome(inputString)
+    inputString == inputString.reveser
+end
+

@@ -1,0 +1,12 @@
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Tên</th>
+    <th>Email</th>
+    <th>Giới tính</th>
+    <th>Mật khẩu</th>
+  </tr>
+  <%= render partial: "user", collection: @users %>
+</table>
+
+<%= button_to "Tạo tài khoản", new_user_path, method: :get %>

@@ -1,0 +1,62 @@
+<%= render partial: "header" %>
+
+<main>
+	<div class="container">
+		<%= form_for @user, url: users_path do |f| %>
+			<div>
+				<h3>Tên	tài khoảng :</h3>
+				<%= f.text_field :user_name %>
+				<% if @user.errors[:user_name].any? %>
+					<span>
+						<%= "Name #{@user.errors[:user_name][0]}" %>			
+					</span>
+				<% end %>
+			</div>
+			<div>
+			  <h3>Email			: </h3>
+			  <%= f.email_field :email, :required => true %>
+			</div>
+			<div>
+			  <h3>Mật khẩu	:	</h3>
+			  <%= f.text_field :password, :required => true %>
+				<% if @user.errors[:password].any? %>
+					<span>
+						<%= "Password #{@user.errors[:password][0]}" %>
+					</span>
+				<% end %>
+			</div>
+			<div>
+				<h3>Tên	: </h3>
+				<%= f.text_field :name %>
+			</div>
+			<div>
+			  <h3>Giới tính	: </h3>
+			  <%= radio_button( @user, "gender", 0) %>Nam
+				<%= radio_button( @user, "gender", 1) %>Nữ
+				<%= radio_button( @user, "gender", 2, {checked: true}) %>Khác<br />
+			</div>
+			<div>
+			  <h3>Ngày sinh	: </h3>
+			  <%= f.date_field :birthday %><br />
+			</div>
+			<div>
+				<h3>Vai trò: </h3>
+				<%= f.select :role, options_for_select([ 'người dùng', 'người kiểm duyệt', 'quản trị viên']) %>
+				<% if( @user.role == 'quản trị viên' ) %>
+					<%= text_field @Password, :required => true %>
+				<% end %>
+			</div>
+			<div>
+				<h3>Ảnh đại diện :</h3>
+				<%= f.file_field :avatar %>
+			</div>
+		  <%= f.submit %>
+		<% end %>
+	</div>
+</main>
+
+<style type="text/css">
+	.field_with_errors{
+		display: inline-block;
+	}
+</style>

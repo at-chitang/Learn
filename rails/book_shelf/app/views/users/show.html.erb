@@ -1,0 +1,42 @@
+<table>
+  <tr>
+    <th>Tên</th>
+    <td><%= @user.name %></td>
+  </tr>
+  <tr>
+    <th>Email</th>
+    <td><%= @user.email %></td>
+  </tr>
+  <tr>
+    <th>Giới tính</th>
+    <td>
+      <%= 
+        case @user.gender 
+          when 0
+            "Nam"
+          when 1
+            "Nữ"
+          else
+            "Ngại quá à"
+        end
+      %>
+    </td>
+  </tr>
+  <tr>
+    <th>Mật khẩu</th>
+    <td>******</td>
+  </tr>
+</table>
+
+<%= button_to "Chỉnh sửa", edit_user_path, method: :get %>
+<%= button_to "Xóa", user_path, method: :delete, data: {confirm: "Bạn có chắc chắn xóa #{@user.name}?"} %>
+<%= button_to "Quay lại", users_path, method: :get %>
+
+<script type="text/javascript">
+  function delete_user()
+  {
+    var del= confirm("Bạn có chắc chắn xóa <%= @user.name %>?");
+    console.log(del);
+    return del;
+  }
+</script>

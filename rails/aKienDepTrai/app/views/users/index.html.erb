@@ -1,0 +1,22 @@
+<%= render partial: "header" %>
+<main class="index">
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Tên tài khoảng</th>
+        <th>Email</th>
+        <th>Mật khẩu</th>
+        <th>Tên</th>
+        <th>Giới tính</th>
+        <th>Ngày sinh</th>
+        <th>Vai trò</th>
+        <th>Ảnh đại diện</th>
+        <th>Provider</th>
+        <th>Uid</th>
+        <th>pass</th>
+      </tr>
+      <%= render partial: "user", collection: @users %>
+    </table>
+</main>
+
+<%= button_to "Tạo tài khoản", new_user_path, method: :get %>
