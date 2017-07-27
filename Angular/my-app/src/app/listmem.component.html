@@ -1,4 +1,9 @@
 <h1>Member list</h1>
-<ul id="list-member">
-
+<ul>
+  <li *ngFor=" let info of data">
+    <a href="#">{{ info }}</a>
+<!--     <button type="button" name="button" (click)="(deleteMember(data.indexOf(info)))">
+      Delete
+    </button>
+ -->  </li>
 </ul>
