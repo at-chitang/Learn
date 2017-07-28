@@ -1,0 +1,30 @@
+<table>
+  <tr>
+    <th>Ten</th>
+    <th>Team</th>
+  </tr>
+  <tr *ngFor = " let info of member">
+    <td>{{info.name}}</td>
+    <td [ngStyle] = "{color: (info.team === 'Ruby') ? 'red' : 'yellow'}">{{info.team}}</td>
+    <td><button (click) = (showDetail(info)) >Xem chi tiet</button></td>
+  </tr>
+</table>
+
+<table *ngIf="shower">
+  <tr>
+    <th>ten :</th>
+    <td>{{shower.name}}</td>
+  </tr>
+  <tr>
+    <th>Team :</th>
+    <td>{{shower.team}}</td>
+  </tr>
+  <tr>
+    <th>Ngay sinh :</th>
+<!--     <td>
+      {{shower.birthday}}
+      <ng-template [ngIf] = "!shower.birthday">Empty</ng-template>
+    </td> -->
+    <td [emptyData]="shower.birthday">{{shower.birthday}}</td>
+  </tr>
+</table>
