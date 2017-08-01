@@ -1,10 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Injectable } from '@angular/core';  
 
-@Component({
-  selector: 'directive',
-  templateUrl: './directive.component.html',
-})
-export class ListTeam {
+@Injectable()
+export class appService {  
   member = [
     {
       name: 'anh Vi',
@@ -22,13 +19,10 @@ export class ListTeam {
       team: 'Ruby'
     }
   ];
-
-  shower: any;
-  constructor(){}
-  showDetail(member :{} = {}){
-    this.shower= null;
-    setTimeout(()=>{
-      this.shower= member;
-    })
+  getAll(){ 
+   return this.member;
+  }
+  getDetail(i :number){
+    return this.member[i]
   }
 }

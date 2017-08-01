@@ -1,0 +1,14 @@
+<table>
+  <tr>
+    <th>Ten</th>
+    <th>Team</th>
+    <th>Avatar</th>
+  </tr>
+  <tr *ngFor = " let info of member; let i = index ">
+    <td>{{info.name}}</td>
+    <td [ngStyle] = "{color: (info.team === 'Ruby') ? 'red' : 'yellow'}">{{info.team}}</td>
+<!--     <td ><img [emptyAvatar]="info.avatar"></td> -->
+    <td><img src="{{ info.avatar | image }}"></td>
+    <td><button (click) = (showDetail(i)) >Xem chi tiet</button></td>
+  </tr>
+</table>

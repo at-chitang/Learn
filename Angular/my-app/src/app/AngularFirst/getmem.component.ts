@@ -7,7 +7,6 @@ import { ListMember } from './listmem.component';
   styleUrls: ['./app.component.css']
 })
 export class GetMember {
-	// @Output() result: EventEmitter<any>= new EventEmitter();
 	name: string;
 	listMember: any;
 

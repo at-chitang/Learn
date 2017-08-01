@@ -1,0 +1,18 @@
+<table *ngIf="shower">
+  <tr>
+    <th>ten :</th>
+    <td>{{shower.name}}</td>
+  </tr>
+  <tr>
+    <th>Team :</th>
+    <td>{{shower.team}}</td>
+  </tr>
+  <tr>
+    <th>Ngay sinh :</th>
+<!--     <td>
+      {{shower.birthday}}
+      <ng-template [ngIf] = "!shower.birthday">Empty</ng-template>
+    </td> -->
+    <td [emptyData]="shower.birthday">{{shower.birthday}}</td>
+  </tr>
+</table>

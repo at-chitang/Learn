@@ -2,10 +2,12 @@
   <tr>
     <th>Ten</th>
     <th>Team</th>
+    <th>Avatar</th>
   </tr>
   <tr *ngFor = " let info of member">
     <td>{{info.name}}</td>
     <td [ngStyle] = "{color: (info.team === 'Ruby') ? 'red' : 'yellow'}">{{info.team}}</td>
+    <td [(emptyAvatar)]="info.avatar"><img src="{{info.avatar}}"></td>
     <td><button (click) = (showDetail(info)) >Xem chi tiet</button></td>
   </tr>
 </table>

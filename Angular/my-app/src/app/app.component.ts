@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Injectable } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -9,15 +9,20 @@ export class AppComponent {
 	member: any;
 
 	constructor(){
-		this.member= []
+		// this.member= []
 	}
 
-	ngOnInit(){
-		this.member.push("ok")
-	}
+	// ngOnInit(){
+	// 	this.member.push("ok")
+	// }
 
-	addMember = (e) :void => {
-    this.member.push(e);
+	// addMember = (e) :void => {
+ //    this.member.push(e);
+ //    console.log("ok");
+ //  }
+
+  showDetail = (e) :void => {
+    this.member = e;
     console.log("ok");
   }
 
