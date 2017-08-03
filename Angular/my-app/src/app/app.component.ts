@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, Input, Injectable } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,13 +6,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-	hello: string;
-	name: string;
-	constructor()
-	{
-		this.hello = 'Hello World';
+	member: any;
+
+	constructor(){
+		// this.member= []
 	}
-	showName(){
-		this.name= "sihc";
-	}
+
+	// ngOnInit(){
+	// 	this.member.push("ok")
+	// }
+
+	// addMember = (e) :void => {
+ //    this.member.push(e);
+ //    console.log("ok");
+ //  }
+
+  showDetail = (e) :void => {
+    this.member = e;
+    console.log("ok");
+  }
+
 }
