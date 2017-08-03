@@ -15,6 +15,8 @@ import { List } from './AngularTotal/list-team.component';
 import { Detail } from './AngularTotal/detail.component';
 import { appService } from './Service/app.service';
 
+import { HttpModule } from '@angular/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +32,8 @@ import { appService } from './Service/app.service';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpModule
   ],
   providers: [appService],
   bootstrap: [AppComponent]

@@ -11,7 +11,16 @@ export class List {
   member: any;
 
   constructor(private _appservice: appService){
-    this.member = this._appservice.getAll();
+    this._appservice.getAll().subscribe(
+        data => {
+          this.member= data.member_list;
+          console.log("ok");
+        },
+        err =>
+          console.log("Can't get ... Code: %s, url %s", err.status, err.url),
+        () =>
+          console.log("done")
+      );
   }
 
   @Output() result: EventEmitter<any> = new EventEmitter();
