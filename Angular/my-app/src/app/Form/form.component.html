@@ -1,0 +1,104 @@
+<form [formGroup]="member" (ngSubmit)="addmember(member)">
+  <fieldset formGroupName="personal">
+    <legend>Personal</legend>
+<!--     <label>
+      Avatar <input type="file" name="avatar" ngModel>
+    </label> -->
+    <br>
+    <label>
+      Name <input formControlName="name" required>
+    </label>
+    <br>
+    <label>
+      Birthday <input type="date" formControlName="birthday">
+    </label>
+  </fieldset>
+  <fieldset formGroupName="company">
+    <legend>Company</legend>
+    <label>
+      Joined <input type="date" formControlName="joined">
+    </label>
+    <br>
+    <label>
+      Team
+      <select formControlName="team" id="team" required (change)="update(this.member.value.company)">
+        <option value="Ruby">Ruby</option>
+        <option value="PHP">PHP</option>
+        <option value="FE">FE</option>
+      </select>
+    </label>
+    <label>
+      Skill <input formControlName="skill" (change)="update(this.member.value.company)">
+    </label>
+  </fieldset>
+  <input [disabled]="!(member.valid && accept)" type="submit" name="submit">
+</form>
+
+
+<h1>Member list</h1>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Birthday</th>
+    <th>Team</th>
+  </tr>
+  <tr *ngFor=" let member of listmember">
+    <td>{{member.personal.name}}</td>
+    <td>{{member.personal.birthday}}</td>
+    <td>{{member.company.team}}</td>
+  </tr>
+</table>
+
+<!-- <form #memberForm="ngForm" (ngSubmit)="addmember(memberForm)">
+  <fieldset ngModelGroup="personal">
+    <legend>Personal</legend>
+    <label>
+      Avatar <input type="file" name="avatar" ngModel>
+    </label>
+    <br>
+    <label>
+      Name <input type="text" name="name" ngModel required>
+    </label>
+    <br>
+    <label>
+      Birthday <input type="date" name="birthday" ngModel>
+    </label>
+  </fieldset>
+  <fieldset ngModelGroup="company">
+    <legend>Company</legend>
+    <label>
+      Joined <input type="date" name="joined" ngModel>
+    </label>
+    <br>
+    <label>
+      Team
+      <select name="team" id="team" ngModel required>
+        <option value="Ruby">Ruby</option>
+        <option value="PHP">PHP</option>
+        <option value="FE">FE</option>
+      </select>
+    </label>
+    <label>
+    <label *ngIf=" !team.valid ">
+      Skill <input type="text" name="skill" ngModel>
+    </label>
+    </label>
+  </fieldset>
+  <input [disabled]="!memberForm.valid" type="submit" name="submit">
+</form>
+
+
+<h1>Member list</h1>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Birthday</th>
+    <th>Team</th>
+  </tr>
+  <tr *ngFor=" let member of listmember">
+    <td>{{member.personal.name}}</td>
+    <td>{{member.personal.birthday}}</td>
+    <td>{{member.company.team}}</td>
+  </tr>
+</table>
+ -->

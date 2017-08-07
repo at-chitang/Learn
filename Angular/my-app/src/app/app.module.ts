@@ -6,16 +6,22 @@ import { AppComponent } from './app.component';
 import { GetMember } from './getmem.component';
 import { ListMember } from './listmem.component';
 
+import { ReactiveFormsModule } from '@angular/forms';
+import { GetForm } from './Form/form.component';
+import { ShowMember } from './ShowMember/showmember.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    GetMember,
-    ListMember
-
+    // GetMember,
+    // ListMember
+    GetForm,
+    ShowMember
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
