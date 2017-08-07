@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { ListMember } from './listmem.component';
 
 @Component({
   selector: 'get-member',
@@ -6,10 +7,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class GetMember {
-	listname= "";
-	constructor()
-	{
+	// @Output() result: EventEmitter<any>= new EventEmitter();
+	name: string;
+	listMember: any;
+
+	constructor(){
+		this.listMember= []
 	}
-	getname(){
+	
+	ngOnInit(){
+		this.listMember.push("sihc")
+	}
+
+	@Output() result: EventEmitter<any> = new EventEmitter();
+	addMember(){
+		// console.log(this.result.emit( this.name ));
+		console.log( this.name );
+		console.log(  this.listMember );
+		this.listMember.push(this.name);
+		this.result.emit( this.name );
 	}
 }
