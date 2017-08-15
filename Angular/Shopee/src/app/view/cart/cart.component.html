@@ -1,0 +1,28 @@
+<br>
+<br>
+<br>
+<section>
+  <div class="container">
+    <table class="table table-bordered table-inverse">
+      <tr>
+        <th>STT</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Subtotal</th>
+      </tr>
+      <tr *ngFor= " let product of product_list; let i = index ">
+        <td>{{i+1}}</td>
+        <td>{{product.product.name}}</td>
+        <td>{{product.product.price}} $</td>
+        <td>{{product.quantity}}</td>
+        <td>{{product.product.price*product.quantity}} $</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td colspan="3">Total price</td>
+        <td>{{totalPrice()}} $</td>
+      </tr>
+    </table>
+  </div>
+</section>

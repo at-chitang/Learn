@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'list-member',
@@ -6,8 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class ListMember {
-	listmem= "";
-	constructor()
-	{
+	@Input() data: any; 
+
+	constructor(){
 	}
+
+	
+
+
 }
