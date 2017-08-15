@@ -1,0 +1,28 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Apple iPhone 6 Plus 16GB - Silver",
+      "price": 699.00,
+      "link": "https://www.mobileciti.com.au/media/catalog/product/cache/1/image/820x/5b55f080804ebb6bfea621368f431f4b/a/p/apple-iphone-6-silver_3.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Samsung Galaxy Note 5",
+      "price": 699.00,
+      "link": "https://www.mobileciti.com.au/media/catalog/product/cache/1/image/820x/5b55f080804ebb6bfea621368f431f4b/s/a/samsung-note-5-black.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Sony Xperia XZ F8331",
+      "price": 699.00,
+      "link": "https://www.mobileciti.com.au/media/catalog/product/cache/1/thumbnail/9df78eab33525d08d6e5fb8d27136e95/s/o/sony-xperia-xz-f8331-mineral-black-front-back.jpg"
+    },
+    {
+      "id": 4,
+      "name": "BPhone 2017",
+      "price": 445.00,
+      "link": "https://thaykinhmanhinhcamung.com/image/cache/data/Thay-kinh/Thay-kinh-2/thay-kinh-cam-ung-bkav-bphone-1206-520x520.png"
+    }
+  ]
+}
